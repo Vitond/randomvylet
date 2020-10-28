@@ -1,0 +1,29 @@
+{
+  "name": "randomtrip",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass src/scss/main.scss public/css/style.css -w",
+    "devserver": "live-server",
+    "start": "npm-run-all --parallel devserver watch:sass watch:js",
+    "compile:sass": "node-sass src/scss/main.scss temp/css/style.comp.css",
+    "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' temp/css/style.comp.css -o temp/style.prefix.css",
+    "compress:css": "node-sass temp/style.prefix.css prod/css/style.css --output-style compressed",
+    "build:css": "npm-run-all compile:sass prefix:css compress:css",
+    "watch:js": "webpack --config webpack.config.js --watch",
+    "build:js": "webpack --config webpack.config.prod.js"
+  },
+  "author": "Ove",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.0.1",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.4",
+    "postcss-cli": "^8.1.0",
+    "webpack": "4.44.2",
+    "webpack-cli": "^4.1.0"
+  },
+  "dependencies": {}
+}

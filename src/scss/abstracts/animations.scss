@@ -1,0 +1,26 @@
+////INFO
+@keyframes showInfo {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+@keyframes hideInfo {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+////UTILITY
+@keyframes doNothing {
+    0% {
+
+    }
+    100% {
+
+    }
+}
