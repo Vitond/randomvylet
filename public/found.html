@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCY18WNxfuJuAUAornOSKyC3m76a6E2SfA&callback=">
+    </script>
+    <script src="js/index.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet"> 
+    <title>Random výlet</title>
+    <link rel="manifest" href="manifest.json">
+</head>
+<body>
+    <header class="header">
+        <h1 class="heading-1">
+            Random výlet generator
+        </h1>
+        <button class="header__btn header__btn--not-clicked" id="show-info">
+            O aplikaci
+        </button>
+        <div class="header__leaf header__leaf--a">
+
+        </div>
+        <div class="header__leaf header__leaf--b">
+            
+        </div>
+        <div class="header__leaf header__leaf--c">
+            
+        </div>
+        <div class="header__leaf header__leaf--d">
+            
+        </div>
+    </header>
+    <main class="main">
+        <div class="map">
+            <div class="map__map" id="map"></div>
+        </div>
+        <div class="found">
+            <h2 class="heading-2">Výlet nalezen!</h2>
+            <p class="found__coord-long"></p>
+            <p class="found__coord-lat"></p>
+        </div>
+        <button href="index.html" id="btn-next-trip" class="btn-next-trip">Najít další výlet -></button>
+        <svg class="tree" width="201" height="449" viewBox="0 0 201 449" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <ellipse cx="100.5" cy="406" rx="100.5" ry="43" fill="#6C9D64"/>
+            <rect x="89" y="170" width="25" height="236" fill="#86501F"/>
+            <path d="M25.9741 245H89.4369H173.997L136.777 136.678H180L95.2686 0L21 136.678H75.0291L25.9741 245Z" fill="#1A720C"/>
+        </svg>
+        <div class="info info--hidden" id="info">
+            <h3 class="heading-3">Co to je?</h3>
+            <p class="info__p">Chtěli jste někdy jet někam na výlet, ale nevěděli jste kam? S touto aplikací se Vám to již víckrát nestane. Tato aplikace Vám pomůže nalézt místo, kam se vydat na výlet, ve Vámi zvoleném okruhu.</p>
+            <h3 class="heading-3">Jak to funguje?</h3>
+            <p class="info__p">Nejdříve musíte zadat výchozí bod = "základnu". Výchozí bod můžete zvolit pomocí souřadnic, nebo pomocí adresy.</p>
+            <h4 class="heading-4">Souřadnice</h4>
+            <p class="info__p info__p--sub">V případě, že jste se rozhodli použít souřadnice, je zadejte do jednotlivých kolonek bez jednotek ve tvaru 128, 53.525 apod.</p>
+            <p class="info__p">
+               Pokud si chcete ověřit, zda jste souřadnice nebo adresu zadali správně, můžete kliknout na tlačítko 'Obnovit' pod šedým rámcem. Po kliknutí na něj se vám v rámci zobrazí mapa.
+            </p>
+            <p class="info__p">
+                Poté se rozhodněte, zda budete destinaci hledat v rámci kruhu nebo v rámci mezikruží. 
+            </p>
+            <h4 class="heading-4">Kruh</h4>
+            <p class="info__p info__p--sub">Např. pro poloměr 50 aplikace najde náhodné místo, které leží od základny méně než 50km vzdušnou čarou.</p>
+            <h4 class="heading-4">Mezikruží</h4>
+            <p class="info__p info__p--sub">Např. pro vnější poloměr 50 a vnitřní poloměr 40 aplikace najde náhodné místo, které od základny leží méně než 50km a zároveň více než 40km vzdušnou čarou.</p>
+            <p class="info__p">Upozornění: Nezapomeňte zadávat hodnoty poloměru jako čísla bez jednotek a pro oddělení desetinných řádů použít tečku.</p>
+            <h3 class="heading-3">To je super!</h3>
+            <p class="info__p">Ano, to je.</p>
+        </div>
+        <div class="error" style="display: none" id="error"></div>
+    </main>
+    <footer class="footer">
+        Created by Ondřej Vitula
+    </footer>
+   
+</body>
+</html>

@@ -1,0 +1,20 @@
+{
+  "name": "Random vylet",
+  "short_name": "Random vylet",
+  "start_url": "/index.html",
+  "scope": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#2C7B55",
+  "description": "Tato aplikace Vám najde náhodné místo ve zvoleném okruhu",
+  "dir": "ltr",
+  "lang": "cs",
+  "orientation": "any",
+  "icons": [
+    {
+      "src": "img/icon.svg",
+      "types": "image/png",
+      "sizes": "144x144"
+    }
+  ]
+}
