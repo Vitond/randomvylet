@@ -51,9 +51,11 @@
         }
         &--submit {
             border: 0;
+            outline: none;
             background-color: $color-green-light;
             clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
             width: 15rem;
+            box-shadow: none;
             padding-top: 1.2rem;
             padding-bottom: 1.2rem;
             padding-left: 1rem;

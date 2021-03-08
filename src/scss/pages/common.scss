@@ -41,11 +41,12 @@
 }
 ////MAIN
 .main {
-    min-height: 55rem;
+    min-height: 70rem;
 
     display: flex;
 
     position: relative;
+    overflow-x: hidden;
 
     @media screen and (max-width: $bp-mobile) {
         height: unset;
@@ -146,7 +147,7 @@
     font-size: 1.3rem;
 
     position: absolute;
-    top: 75%;
+    top: 60%;
     left: 10rem;
 
     @media screen and (max-width: 1200px) {

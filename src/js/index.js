@@ -99,7 +99,7 @@ if(form) {
             const [finalLng, finalLat] = fcns.calculateCoordTransform(circleRadio, formEls, coords);
             
             // Constructing URL and redirecting the user to the 'found' page
-            const url = new URL(`/views/found.html?lng=${finalLng}&lat=${finalLat}`, document.location.href);
+            const url = new URL(`/found.html?lng=${finalLng}&lat=${finalLat}`, document.location.href);
             document.location.href = url;
 
         } else {
@@ -156,7 +156,7 @@ if(found) {
     // When user clicks the button, he gets redirected to index.html
     const nextTripBtn = document.getElementById('btn-next-trip');
     nextTripBtn.addEventListener('click', () => {
-        const url = new URL(`/views`, document.location.href);
+        const url = new URL(`/`, document.location.href);
         document.location.href = url;
     })
 }
@@ -174,6 +174,9 @@ if(found) {
     fcns.showError('Váš prohlížeč zřejmě nepodporuje všechny prvky, které při kódování této aplikace používám. Z toho důvodu je možné, že aplikace nebude fungovat tak, jak by měla.')
 }
 
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('../sw.js')
+}
 
 
 

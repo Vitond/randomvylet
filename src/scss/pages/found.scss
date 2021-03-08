@@ -31,11 +31,11 @@
     position: absolute;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
-    top: 65rem;
+    top: 60rem;
     overflow: hidden;
 
     @media screen and (max-width: 1200px) {
-       top: 58rem;
+      top: 60rem;
     }
     @media screen and (max-width: $bp-mobile) {
         margin-top: 4rem;

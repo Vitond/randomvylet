@@ -82,11 +82,11 @@ body {
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  top: 65rem;
+  top: 60rem;
   overflow: hidden; }
   @media screen and (max-width: 1200px) {
     .btn-next-trip {
-      top: 58rem; } }
+      top: 60rem; } }
   @media screen and (max-width: 900px) {
     .btn-next-trip {
       margin-top: 4rem;
@@ -151,9 +151,11 @@ body {
         outline: none; }
     .form__input--submit {
       border: 0;
+      outline: none;
       background-color: #6C9D64;
       clip-path: polygon(0 0, 75% 0, 100% 100%, 0 100%);
       width: 15rem;
+      box-shadow: none;
       padding-top: 1.2rem;
       padding-bottom: 1.2rem;
       padding-left: 1rem;
@@ -261,9 +263,10 @@ body {
     fill: #6C9D64; }
 
 .main {
-  min-height: 55rem;
+  min-height: 70rem;
   display: flex;
-  position: relative; }
+  position: relative;
+  overflow-x: hidden; }
   @media screen and (max-width: 900px) {
     .main {
       height: unset;
@@ -337,7 +340,7 @@ body {
   color: red;
   font-size: 1.3rem;
   position: absolute;
-  top: 75%;
+  top: 60%;
   left: 10rem; }
   @media screen and (max-width: 1200px) {
     .error {

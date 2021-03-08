@@ -63,9 +63,10 @@ export const getCoordsFromAddress = async (address) => {
     const urlAddress = encodeURI(address);
 
     // Sending request
-    const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${urlAddress},+Mountain+View,+CA&key=AIzaSyDmi1OHuKzeuT3xbKkcgBQ4C6FEC9CN6hE`);
+    const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${urlAddress},+Mountain+View,+CA&key=AIzaSyCY18WNxfuJuAUAornOSKyC3m76a6E2SfA`);
     //Parsing
     const data = await response.json();
+    console.log(data);
 
     // Returning coords for the best result
     const coordinates = data.results[0].geometry.location;
