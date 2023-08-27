@@ -99,7 +99,7 @@ if(form) {
             const [finalLng, finalLat] = fcns.calculateCoordTransform(circleRadio, formEls, coords);
             
             // Constructing URL and redirecting the user to the 'found' page
-            const url = new URL(`/randomvylet/found.html?lng=${finalLng}&lat=${finalLat}`, document.location.href);
+            const url = document.location.href + "found.html?lng=${finalLng}&lat=${finalLat}"
             document.location.href = url;
 
         } else {
